@@ -6,4 +6,4 @@
  Copy WAV files to SD card
  Test Bluetooth pairing with speaker
 
- MAKE SURE yolo11m.pt is INSTALLED
+ MAKE SURE yolo11m.pt is DOWNLOADED
