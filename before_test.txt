@@ -1,0 +1,9 @@
+ Install ArduinoJson on both ESP32s
+ Update WiFi credentials in both sketches
+ Set correct laptop IP in ESP32-CAM code
+ Get ESP32-WROOM IP and update FastAPI ESP32_AUDIO_URL
+ Create WAV files (44.1kHz, stereo, 16-bit)
+ Copy WAV files to SD card
+ Test Bluetooth pairing with speaker
+
+ MAKE SURE yolo11m.pt is INSTALLED
