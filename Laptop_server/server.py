@@ -650,9 +650,7 @@ async def calibrate_camera(
         "message": f"Add CAMERA_FOCAL_LENGTH_PX={focal_length:.2f} to your .env file"
     }
 
-# ============================================================================
 #  MAIN ENTRY POINT
-# ============================================================================
 
 if __name__ == "__main__":
     print("\n" + "="*60)
