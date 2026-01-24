@@ -268,7 +268,7 @@ class DistanceEstimator:
         pixel_height = y2 - y1
         
         if pixel_height <= 0:
-            return 10.0  # Default far distance
+            return 10.0  # far distance
         
         # Get known real-world height for this object class
         real_height = self.object_heights.get(obj_class.lower())
@@ -410,7 +410,7 @@ async def lifespan(app: FastAPI):
     cv2.destroyAllWindows()
     print("✅ Application stopped")
 
-#  FASTAPI APPLICATION
+#  FASTapi
 
 app = FastAPI(lifespan=lifespan)
 
@@ -671,7 +671,7 @@ async def fall_alert(request: Request):
         print(f"   Event: {data.get('event', 'fall_detected')}")
         print(f"   Time: {time.strftime('%H:%M:%S')}")
         
-        # Trigger audio alert using ASYNC HTTP (improved!)
+        # Trigger audio alert using asasynchron HTTP 
         if app.state.esp32_client.enabled:
             success = await app.state.esp32_client.send_alert(
                 "emergency",
@@ -683,7 +683,7 @@ async def fall_alert(request: Request):
             else:
                 print(f"   ⚠️  Failed to send emergency alert")
         
-        print("🚨 ═══════════════════════════════════════\n")
+        print(" ═══════════════════════════════════════\n")
         
         return {"success": True, "message": "Fall alert logged"}
         
