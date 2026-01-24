@@ -24,13 +24,11 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-/* ============================================
-   USER CONFIGURATION
-   ============================================ */
+/* USER Configs */
 
 // WiFi credentials (optional - for laptop alerts)
-const char* ssid = "YOUR_WIFI_NAME";
-const char* password = "YOUR_WIFI_PASSWORD";
+const char* ssid = "~";
+const char* password = "~";
 
 // Laptop endpoint for obstacle alerts
 const char* laptopAlertUrl = "http://192.168.1.100:8000/obstacle_alert";
@@ -42,9 +40,7 @@ enum SensorPosition {
   SENSOR_RIGHT = 2
 };
 
-/* ============================================
-   PIN DEFINITIONS
-   ============================================ */
+/* PIN DEFINING */
 
 // Servo
 Servo myServo;
@@ -62,11 +58,9 @@ const int foreward2 = 33, backward2 = 25, pwmPin2 = 19;
 const int trigPin3 = 26, echoPin3 = 25;
 const int foreward3 = 15, backward3 = 4, pwmPin3 = 5;
 
-/* ============================================
-   GLOBAL VARIABLES
-   ============================================ */
+/* GLOBALIZATION IN VARIABLES cant escape sustainable development HHAHAH */
 
-// Detection ranges (in cm) - adjustable per sensor
+// Detection ranges (in cm) - adjustable per sensor //PLEASE CHANGE VALUES HERE
 int radius = 100;   // LEFT sensor
 int radius2 = 100;  // CENTER sensor
 int radius3 = 100;  // RIGHT sensor
@@ -77,7 +71,7 @@ int masterRange = 100;
 // Motor PWM values
 int pwm = 0, pwm2 = 0, pwm3 = 0;
 
-// Timing
+// Timing (change if needed)
 unsigned long servoMillis = 0;
 const long servoInterval = 10;
 unsigned long sensorMillis = 0;
@@ -347,9 +341,7 @@ void setup() {
   Serial.println();
 }
 
-/* ============================================
-   MAIN LOOP
-   ============================================ */
+/*  MAIN LOOP  */
 
 void loop() {
   unsigned long currentMillis = millis();

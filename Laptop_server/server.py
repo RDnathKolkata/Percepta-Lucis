@@ -371,9 +371,7 @@ class ESP32AlertClient:
         print(f"🔁 ESP32 alerts: {'ON' if self.enabled else 'OFF'}")
         return self.enabled
 
-# ============================================================================
 #  BACKGROUND TASKS
-# ============================================================================
 
 async def memory_cleanup_task(memory: ObjectMemory):
     """Background task to periodically clean up stale tracks"""
@@ -454,11 +452,11 @@ def draw_detections(img_array, detections):
         
         # Color based on alert priority
         if class_name in ALERT_CLASSES:
-            color = (0, 0, 255)  # Red for alert objects
+            color = (0, 0, 255)  # Red for alert 
         else:
-            color = (0, 255, 0)  # Green for other objects
+            color = (0, 255, 0)  # Green for other 
         
-        # Draw bounding box
+        #  bounding box
         cv2.rectangle(img, (x1, y1), (x2, y2), color, 2)
         
         # Prepare label text
@@ -468,7 +466,7 @@ def draw_detections(img_array, detections):
         if distance > 0:
             label += f" {distance:.1f}m"
         
-        # Draw label background
+        #  label background
         (text_width, text_height), baseline = cv2.getTextSize(
             label, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1
         )
@@ -519,9 +517,7 @@ def display_frame(img_array, detections):
         cv2.destroyAllWindows()
         print("🛑 Display window closed (server still running)")
 
-# ============================================================================
 #  API ENDPOINTS
-# ============================================================================
 
 @app.post("/frame")
 async def receive_frame(file: UploadFile = File(...)):
