@@ -80,6 +80,8 @@ For inquiries regarding commercial permissions, collaborations, or licensing, pl
 
 **Rajdeep Debnath**  
 GitHub: https://github.com/RDnathKolkata
+E-Mail: [rdnathkolkata@gmail.com](mailto:rdnathkolkata@gmail.com)
+
 
 ---
 
@@ -92,4 +94,4 @@ Unauthorized use of the trademarks may result in:
 
 ---
 
-_Last updated: 2026_
+_Last updated: February 2026_
